@@ -1,5 +1,5 @@
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_extension"
+# Table "tx_extensionrepository_domain_model_extension"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_extension (
 	uid int(11) NOT NULL auto_increment,
@@ -42,7 +42,7 @@ CREATE TABLE tx_extensionrepository_domain_model_extension (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_category"
+# Table "tx_extensionrepository_domain_model_category"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_category (
 	uid int(11) NOT NULL auto_increment,
@@ -77,7 +77,7 @@ CREATE TABLE tx_extensionrepository_domain_model_category (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_tag"
+# Table "tx_extensionrepository_domain_model_tag"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_tag (
 	uid int(11) NOT NULL auto_increment,
@@ -111,7 +111,7 @@ CREATE TABLE tx_extensionrepository_domain_model_tag (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_version"
+# Table "tx_extensionrepository_domain_model_version"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_version (
 	uid int(11) NOT NULL auto_increment,
@@ -179,7 +179,7 @@ CREATE TABLE tx_extensionrepository_domain_model_version (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_media"
+# Table "tx_extensionrepository_domain_model_media"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_media (
 	uid int(11) NOT NULL auto_increment,
@@ -217,7 +217,7 @@ CREATE TABLE tx_extensionrepository_domain_model_media (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_experience"
+# Table "tx_extensionrepository_domain_model_experience"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_experience (
 	uid int(11) NOT NULL auto_increment,
@@ -253,7 +253,7 @@ CREATE TABLE tx_extensionrepository_domain_model_experience (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_relation"
+# Table "tx_extensionrepository_domain_model_relation"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_relation (
 	uid int(11) NOT NULL auto_increment,
@@ -290,7 +290,7 @@ CREATE TABLE tx_extensionrepository_domain_model_relation (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_domain_model_author"
+# Table "tx_extensionrepository_domain_model_author"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_domain_model_author (
 	uid int(11) NOT NULL auto_increment,
@@ -328,7 +328,7 @@ CREATE TABLE tx_extensionrepository_domain_model_author (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_extension_category_mm"
+# Table "tx_extensionrepository_extension_category_mm"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_extension_category_mm (
 	uid_local int(10) unsigned DEFAULT '0' NOT NULL,
@@ -342,7 +342,7 @@ CREATE TABLE tx_extensionrepository_extension_category_mm (
 
 
 # ======================================================================
-# Table configuration for table "tx_extensionrepository_extension_tag_mm"
+# Table "tx_extensionrepository_extension_tag_mm"
 # ======================================================================
 CREATE TABLE tx_extensionrepository_extension_tag_mm (
 	uid_local int(10) unsigned DEFAULT '0' NOT NULL,
