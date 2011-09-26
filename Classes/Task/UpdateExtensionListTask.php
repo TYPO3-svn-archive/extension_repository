@@ -92,7 +92,7 @@
 		protected function executeTask($lastRun, $offset, $count) {
 				// Check static setup
 			if (empty($this->setup['settings.'])) {
-				throw new Exception('Please include static setup "TER Frontend - Default Configuration (extension_repository)" on root page');
+				throw new Exception('Please include static setup "Extension Repository - Default Configuration (extension_repository)" on root page');
 			}
 
 				// Check storage page

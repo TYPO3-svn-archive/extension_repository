@@ -2,6 +2,6 @@
 # JSON output configuration ot the extension "extension_repository"
 # ======================================================================
 plugin.tx_extensionrepository.jsonOutput {
-  # cat=TER Frontend - JSON/json/100; type=int+; label=Type number of the JSON page object
+  # cat=Extension Repository - JSON/json/100; type=int+; label=Type number of the JSON page object
   typeNum = 95832
 }
