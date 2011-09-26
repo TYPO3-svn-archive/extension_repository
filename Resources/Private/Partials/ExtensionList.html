@@ -1,0 +1,64 @@
+{namespace extrep=Tx_ExtensionRepository_ViewHelpers}
+
+<f:if condition="{extensions}">
+	<f:then>
+		<f:widget.paginate objects="{extensions}" as="paginateExtensions" configuration="{itemsPerPage: settings.listCount, insertAbove: 0, insertBelow: 1}">
+			<f:for each="{paginateExtensions}" as="extension">
+				<div class="repository-ext-list-row cl">
+
+					<!-- Headline -->
+					<div class="repository-ext-list-row-head">
+						<extrep:extensionIcon version="{extension.lastVersion}" alt="{extension.lastVersion.title}" class="repository-ext-icon" />
+						<f:link.action controller="Extension" action="show" arguments="{extension : extension}">{extension.lastVersion.title}</f:link.action>
+						<span class="repository-ext-list-row-key">{extension.extKey}</span>
+					</div>
+
+					<!-- Content area -->
+					<div class="repository-ext-list-row-regular cl">
+
+						<!-- Description -->
+						<div class="repository-ext-list-row-description">
+							<div class="repository-ext-list-meta">
+								<f:translate key="by"/> {extension.lastVersion.author.name}
+								<f:if condition="{extension.categories}">
+									| <f:render partial="InlineCategoryList" arguments="{categories: extension.categories}"/>
+								</f:if>
+							</div>
+							<extrep:crop length="{settings.descriptionLength}">{extension.lastVersion.description}</extrep:crop>
+						</div>
+
+						<!-- General information -->
+						<div class="repository-ext-list-row-info repository-ext-info">
+							<table>
+								<tr>
+									<th><f:translate key="version"/></th>
+									<td>{extension.lastVersion.versionString} <span class="repository-ext-state repository-ext-state-{extension.lastVersion.state}">{extension.lastVersion.state}</span></td>
+								</tr>
+								<tr>
+									<th><f:translate key="last_updated"/></th>
+									<td><extrep:dateTime format="{settings.dateFormat}">{extension.lastVersion.uploadDate}</extrep:dateTime></td>
+								</tr>
+								<tr>
+									<th><f:translate key="downloads"/></th>
+									<td>{extension.downloads}</td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+
+					<div class="repository-ext-list-row-downloads">
+						<f:link.action controller="Extension" action="download" arguments="{extension : extension, versionString : extension.lastVersion.versionString, format : 't3x'}" class="repository-download-icon repository-download-icon-t3x"><f:translate key="download_t3x"/></f:link.action>
+						<f:if condition="{extension.lastVersion.hasZipFile}">
+							<span class="bu bu-mini"><f:link.action controller="Extension" action="download" arguments="{extension : extension, versionString : extension.lastVersion.versionString, format : 'zip'}" class="repository-download-icon repository-download-icon-zip"><f:translate key="download_zip"/></f:link.action></span>
+						</f:if>
+					</div>
+
+				</div>
+			</f:for>
+		</f:widget.paginate>
+	</f:then>
+	<f:else>
+		<f:translate key="msg.no_entries_found" />
+	</f:else>
+</f:if>

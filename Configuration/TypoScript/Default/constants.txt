@@ -1,0 +1,114 @@
+# ======================================================================
+# Default configuration of the extension "extension_repository"
+# ======================================================================
+plugin.tx_extensionrepository {
+	settings {
+		# cat=Extension Repository/settings/1000; type=int+; label=List count: Count of Extensions per page in list view
+		listCount = 20
+
+		# cat=Extension Repository/settings/1010; type=int+; label=Latest count: Count of latest Extensions
+		latestCount = 10
+
+		# cat=Extension Repository/settings/1020; type=int+; label=Author list count: Count of entries in author list
+		authorListCount = 25
+
+		# cat=Extension Repository/settings/1030; type=int+; label=Top rated count: Count of top rated Extensions
+		topRatedCount = 10
+
+		# cat=Extension Repository/settings/1040; type=int+; label=Random author count: Count of random Authors
+		randomAuthorCount = 10
+
+		# cat=Extension Repository/settings/1050; type=int+; label=Description length: Crop description at this count of signs
+		descriptionLength = 350
+
+		# cat=Extension Repository/settings/1060; type=string; label=Date format: Date format
+		dateFormat = F j, Y
+
+		# cat=Extension Repository/settings/1070; type=string; label=Media root path: Media root path for zip files and images
+		mediaRootPath = fileadmin/extensionFiles/
+
+		# cat=Extension Repository/settings/1080; type=boolean; label=Count downloads: Count extension downloads via download action
+		countDownloads = 0
+
+		# cat=Extension Repository/settings/1090; type=int+; label=Default point count: Count of points to show in chart
+		defaultPointCount = 5
+
+		# cat=Extension Repository/settings/1100; type=int+; label=Version history count: Count of versions to show in history
+		versionHistoryCount = 3
+
+		# cat=Extension Repository/settings/1110; type=boolean; label=Skip latest version: Skip latest version in version history
+		skipLatestVersion = 1
+
+		terConnection {
+			# cat=Extension Repository/settings/2000; type=string; label=TER WSDL URI: WSDL URI to connect TER server
+			wsdl = http://typo3.org/wsdl/tx_ter_wsdl.php
+
+			# cat=Extension Repository/settings/2010; type=string; label=TER Username: Username to connect TER server
+			username =
+
+			# cat=Extension Repository/settings/2020; type=string; label=TER Password: Password to connect TER server
+			password =
+		}
+
+		smallImage {
+			# cat=Extension Repository/settings/3000; type=int+; label=Small image maxW: Maximal width for small images
+			maxW = 200
+
+			# cat=Extension Repository/settings/3010; type=int+; label=Small image maxH: Maximal height for small images
+			maxH = 160
+
+			# cat=Extension Repository/settings/3020; type=int+; label=Small image quality: Quality of small images
+			quality = 70
+
+			# cat=Extension Repository/settings/3030; type=string; label=Small image format: Output format of small images
+			ext = jpg
+		}
+
+		largeImage {
+			# cat=Extension Repository/settings/4000; type=int+; label=Large image maxW: Maximal width for large images in fullscreen mode
+			maxW = 1024
+
+			# cat=Extension Repository/settings/4010; type=int+; label=Large image maxH: Maximal height for large images in fullscreen mode
+			maxH = 768
+
+			# cat=Extension Repository/settings/4020; type=int+; label=Large image quality: Quality of large images
+			quality = 70
+
+			# cat=Extension Repository/settings/4030; type=string; label=Large image format: Output format of large images
+			ext = jpg
+		}
+
+		show {
+			# cat=Extension Repository/settings/5000; type=boolean; label=Show author extensions: Show all extensions of an author on detail view
+			authorExtensions = 0
+
+			# cat=Extension Repository/settings/5010; type=boolean; label=Show category extensions: Show all extensions of a category on detail view
+			categoryExtensions = 0
+		}
+	}
+
+	persistence {
+		# cat=Extension Repository/persistence/6000; type=int+; label=Storage PID: General storage PID for the Extension Repository
+		storagePid = 0
+	}
+
+	view {
+		# cat=Extension Repository/view/7000; type=string; label=Template root path: Path to template root
+		templateRootPath = EXT:extension_repository/Resources/Private/Templates/
+
+		# cat=Extension Repository/view/7010; type=string; label=Partial root path: Path to template partials
+		partialRootPath = EXT:extension_repository/Resources/Private/Partials/
+
+		# cat=Extension Repository/view/7020; type=string; label=Layout root path: Path to template layouts
+		layoutRootPath = EXT:extension_repository/Resources/Private/Layouts/
+	}
+
+	libraries {
+		# cat=Extension Repository/libraries/8000; type=string; label=Load jQuery: Load jQuery libraray into footer
+		jquery.load = 1
+
+		# cat=Extension Repository/libraries/8010; type=string; label=Load jqPlot: Load jqPlot libraray into footer
+		jqplot.load = 1
+	}
+
+}

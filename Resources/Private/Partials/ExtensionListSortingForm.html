@@ -1,0 +1,14 @@
+{namespace extrep=Tx_ExtensionRepository_ViewHelpers}
+
+<div id="repository-ext-list-sort">
+	<form method="get" action="{f:uri.action(controller:'Extension', action:'index', noCacheHash: 1)}">
+		<span class="repository-ordering-form-sorting">
+			<f:form.select name="tx_extensionrepository_pi1[sorting]" options="{
+				NULL: '{f:translate(key:\'sort_extensions_by\')}',
+				updated: '{f:translate(key:\'sorting.updated\')}',
+				downloads: '{f:translate(key:\'sorting.downloads\')}',
+				title: '{f:translate(key:\'sorting.title\')}'
+			}" />
+		</span>
+	</form>
+</div>

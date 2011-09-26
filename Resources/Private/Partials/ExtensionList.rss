@@ -1,0 +1,12 @@
+{namespace extrep=Tx_ExtensionRepository_ViewHelpers}
+
+<f:for each="{extensions}" as="extension">
+	<item>
+		<title>{extension.lastVersion.title}</title>
+		<link><extrep:cdata><f:uri.action action="show" arguments="{extension : extension}" absolute="1"></f:uri.action></extrep:cdata></link>
+		<guid><extrep:cdata><f:uri.action action="download" arguments="{extension : extension, version : extension.lastVersion}" absolute="1"></f:uri.action></extrep:cdata></guid>
+		<description><extrep:cdata>{extension.lastVersion.description}</extrep:cdata></description>
+		<content:encoded><extrep:cdata></extrep:cdata></content:encoded>
+		<pubDate><extrep:dateTime format="{settings.rssOutput.dateFormat}">{extension.lastVersion.uploadDate}</extrep:dateTime></pubDate>
+	</item>
+</f:for>

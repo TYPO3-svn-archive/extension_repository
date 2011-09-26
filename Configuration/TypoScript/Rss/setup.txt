@@ -1,0 +1,30 @@
+# ======================================================================
+# RSS output configuration ot the extension "extension_repository"
+# ======================================================================
+plugin.tx_extensionrepository.settings.rssOutput {
+  typeNum     = {$plugin.tx_extensionrepository.rssOutput.typeNum}
+  title       = {$plugin.tx_extensionrepository.rssOutput.title}
+  link        = {$plugin.tx_extensionrepository.rssOutput.link}
+  description = {$plugin.tx_extensionrepository.rssOutput.description}
+  language    = {$plugin.tx_extensionrepository.rssOutput.language}
+  image       = {$plugin.tx_extensionrepository.rssOutput.image}
+  imageWidth  = {$plugin.tx_extensionrepository.rssOutput.imageWidth}
+  imageHeight = {$plugin.tx_extensionrepository.rssOutput.imageHeight}
+  docs        = {$plugin.tx_extensionrepository.rssOutput.docs}
+  webmaster   = {$plugin.tx_extensionrepository.rssOutput.webmaster}
+  dateFormat  = {$plugin.tx_extensionrepository.rssOutput.dateFormat}
+}
+
+rssOutput = PAGE
+rssOutput {
+  typeNum = {$plugin.tx_extensionrepository.rssOutput.typeNum}
+
+  10 =< tt_content.list.20.extrep_pi1
+
+  config {
+    disableAllHeaderCode = 1
+    additionalHeaders = Content-type:application/xml
+    xhtml_cleaning = 0
+    admPanel = 0
+  }
+}

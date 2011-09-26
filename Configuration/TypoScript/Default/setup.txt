@@ -1,0 +1,89 @@
+# ======================================================================
+# Default configuration of the extension "extension_repository"
+# ======================================================================
+plugin.tx_extensionrepository {
+	## General settings
+	settings {
+		latestCount           = {$plugin.tx_extensionrepository.settings.latestCount}
+		listCount             = {$plugin.tx_extensionrepository.settings.listCount}
+		authorListCount       = {$plugin.tx_extensionrepository.settings.authorListCount}
+		topRatedCount         = {$plugin.tx_extensionrepository.settings.topRatedCount}
+		randomAuthorCount     = {$plugin.tx_extensionrepository.settings.randomAuthorCount}
+		descriptionLength     = {$plugin.tx_extensionrepository.settings.descriptionLength}
+		dateFormat            = {$plugin.tx_extensionrepository.settings.dateFormat}
+		mediaRootPath         = {$plugin.tx_extensionrepository.settings.mediaRootPath}
+		countDownloads        = {$plugin.tx_extensionrepository.settings.countDownloads}
+		defaultPointCount     = {$plugin.tx_extensionrepository.settings.defaultPointCount}
+		versionHistoryCount   = {$plugin.tx_extensionrepository.settings.versionHistoryCount}
+		skipLatestVersion     = {$plugin.tx_extensionrepository.settings.skipLatestVersion}
+
+		terConnection {
+			wsdl                = {$plugin.tx_extensionrepository.settings.terConnection.wsdl}
+			username            = {$plugin.tx_extensionrepository.settings.terConnection.username}
+			password            = {$plugin.tx_extensionrepository.settings.terConnection.password}
+		}
+
+		smallImage {
+			maxW                = {$plugin.tx_extensionrepository.settings.smallImage.maxW}
+			maxH                = {$plugin.tx_extensionrepository.settings.smallImage.maxH}
+			quality             = {$plugin.tx_extensionrepository.settings.smallImage.quality}
+			ext                 = {$plugin.tx_extensionrepository.settings.smallImage.ext}
+		}
+
+		largeImage {
+			maxW                = {$plugin.tx_extensionrepository.settings.largeImage.maxW}
+			maxH                = {$plugin.tx_extensionrepository.settings.largeImage.maxH}
+			quality             = {$plugin.tx_extensionrepository.settings.largeImage.quality}
+			ext                 = {$plugin.tx_extensionrepository.settings.largeImage.ext}
+		}
+
+		show {
+			authorExtensions    = {$plugin.tx_extensionrepository.settings.show.authorExtensions}
+			categoryExtensions  = {$plugin.tx_extensionrepository.settings.show.categoryExtensions}
+		}
+	}
+
+	## Storage settings
+	persistence {
+		storagePid            = {$plugin.tx_extensionrepository.persistence.storagePid}
+
+		classes {
+			## Add model for extension manager cache entries (cache_extensions)
+			Tx_ExtensionRepository_Domain_Model_ExtensionManagerCacheEntry {
+				mapping {
+					tableName = cache_extensions
+					recordType = Tx_ExtensionRepository_Domain_Model_ExtensionManagerCacheEntry
+				}
+			}
+		}
+	}
+
+	## View specific settings
+	view {
+		templateRootPath      = {$plugin.tx_extensionrepository.view.templateRootPath}
+		partialRootPath       = {$plugin.tx_extensionrepository.view.partialRootPath}
+		layoutRootPath        = {$plugin.tx_extensionrepository.view.layoutRootPath}
+	}
+}
+
+
+# ======================================================================
+# Page object configuration of the extension "extension_repository"
+# ======================================================================
+## jQuery
+[globalVar = LIT:1 = {$plugin.tx_extensionrepository.libraries.jquery.load}]
+  page.includeJSFooterlibs.jquery = EXT:extension_repository/Resources/Public/Javascript/jquery-1.6.2.min.js
+[global]
+
+## jqPlot
+[globalVar = LIT:1 = {$plugin.tx_extensionrepository.libraries.jqplot.load}]
+  page.includeCSS.jqplot = EXT:extension_repository/Resources/Public/Javascript/jqPlot/jquery.jqplot.min.css
+  page.includeJSFooterlibs.jqplot1 = EXT:extension_repository/Resources/Public/Javascript/jqPlot/jquery.jqplot.js
+  page.includeJSFooterlibs.jqplot2 = EXT:extension_repository/Resources/Public/Javascript/jqPlot/plugins/jqplot.highlighter.min.js
+  page.includeJSFooterlibs.jqplot3 = EXT:extension_repository/Resources/Public/Javascript/jqPlot/plugins/jqplot.cursor.min.js
+  page.includeJSFooterlibs.jqplot4 = EXT:extension_repository/Resources/Public/Javascript/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js
+[global]
+
+## Default files
+page.includeCSS.tx_extensionrepository = EXT:extension_repository/Resources/Public/Stylesheet/Default.css
+page.includeJSFooterlibs.tx_extensionrepository = EXT:extension_repository/Resources/Public/Javascript/Default.js
