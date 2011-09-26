@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "extension_repository".
 #
-# Auto generated 26-09-2011 15:32
+# Auto generated 23-05-2011 23:23
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Extension Repository',
-	'description' => 'New TER Frontend based on Extbase and Fluid',
+	'description' => 'Extension Repository based on Extbase and Fluid',
 	'category' => 'plugin',
 	'author' => 'Kai Vogel',
 	'author_email' => 'kai.vogel@speedprogs.de',
@@ -22,14 +22,14 @@ $EM_CONF[$_EXTKEY] = array(
 	'conflicts' => '',
 	'priority' => '',
 	'module' => '',
-	'state' => 'alpha',
+	'state' => 'beta',
 	'internal' => '',
 	'uploadfolder' => 0,
-	'createDirs' => 'typo3temp/tx_extensionrepository/images/,typo3temp/tx_extensionrepository/files/',
+	'createDirs' => '',
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '0.1.0',
+	'version' => '0.9.0',
 	'constraints' => array(
 		'depends' => array(
 			'cms' => '',
